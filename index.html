@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>ルートマップ（地図切替対応）</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css" rel="stylesheet" />
+  <link href="./style.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="map"></div>
+  <div id="layer-control" class="layer-selector">
+    <select id="layer-select"></select>
+  </div>
+  <div class="attribution">
+    地図データ：<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">国土地理院</a>、
+    <a href="https://disaportal.gsi.go.jp/" target="_blank">防災ポータル</a>、
+    <a href="https://www.mlit.go.jp/plateau/" target="_blank">PLATEAU</a>、
+    <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>、
+    <a href="http://ktgis.net/" target="_blank">今昔マップ</a>
+  </div>
+  <div id="img-modal" class="modal" onclick="this.style.display='none'">
+    <img id="modal-image" src="" alt="拡大画像">
+  </div>
+  <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
